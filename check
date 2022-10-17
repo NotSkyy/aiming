@@ -1,12 +1,12 @@
 --print(game:GetService("RbxAnalyticsService"):getClientId())
 
 local table = loadstring(game:HttpGet("https://raw.githubusercontent.com/NotSkyy/aiming/main/DAHOOD.lua"))()
-local hwid = game:GetService("RbxAnalyticsService"):getClientId()
+local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
 
 for i,v in pairs(table) do
     if v == hwid then
         print("Secured acces!")
     else
-        game.Players.LocalPlayer:Kick("You are NOT whitelisted. \nIf you think its an error, please contact support.")
+        game.Players.LocalPlayer:Kick("\nYou are NOT whitelisted. \nIf you think its an error, please contact support.")
     end
 end
